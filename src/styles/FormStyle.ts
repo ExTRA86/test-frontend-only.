@@ -10,7 +10,6 @@ export const FormStyle = styled.div<IError>`
   width: 40%;
 
   display: inline-table;
-  // display: table;
 
   margin: auto;
   position: absolute;
@@ -21,7 +20,6 @@ export const FormStyle = styled.div<IError>`
   align-items: center;
 
   form {
-    // margin-top: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
