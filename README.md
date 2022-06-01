@@ -1,3 +1,11 @@
+Требуется написать приложение в соответствии с макетом. Все запросы к серверу нужно имитировать на стороне фронта.
+Макет - https://www.figma.com/file/jyTp0gnYwVBkppUgab90ju/Only-forms?node-id=0%3A1
+
+1. На странице "Авторизация" пользователь вводит данные (логин: steve.jobs@example.com , пароль: password), в случае ошибки выводить сообщение в соответствии с дизайном. В момент отправки запроса на сервер (имитация), следует отключать кнопку.
+2. После того, как пользователь успешно авторизовался, его должно перенести на страницу "Профиль" (/profile), где отображается почта под которой он авторизовался.
+3. При нажатии на кнопку "Выйти", необходимо произвести выход из системы с возвращением на страницу "Авторизация" (/login)
+   Стек - react, typescript, react-router, styled-components, react-hook-form.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { FC, useEffect, useState } from 'react';
+import { AuthContext } from './context';
+import { BrowserRouter } from 'react-router-dom';
+import AppRouter from './components/AppRouter';
+import Header from './components/UI/Header';
+import { AppStyle } from './styles/AppStyle';
 
-function App() {
+const App: FC = () => {
+  const [isAuth, setIsAuth] = useState<boolean>(false);
+  const [isLoading, setLoading] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (localStorage.getItem('auth')) {
+      setIsAuth(true);
+    }
+    setLoading(false);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthContext.Provider
+      value={{
+        isAuth,
+        setIsAuth,
+        isLoading,
+        setLoading,
+      }}
+    >
+      <BrowserRouter>
+        <AppStyle>
+          <Header />
+          <AppRouter />
+        </AppStyle>
+      </BrowserRouter>
+    </AuthContext.Provider>
   );
-}
+};
 
 export default App;
