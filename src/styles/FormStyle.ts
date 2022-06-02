@@ -40,13 +40,6 @@ export const FormStyle = styled.div<IError>`
     line-height: 19px;
   }
 
-  input[type='errorText'] {
-    border: 1px solid #e26f6f;
-    background: #f5e9e9;
-    color: #000000 !important;
-    text-decoration-color: black !important;
-  }
-
   input[type='login'] {
     border: ${props => (props.errorLogin ? '1px solid #E26F6F' : '0')};
   }
