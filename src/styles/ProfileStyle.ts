@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const ProfileStyle = styled.div`
   display: flex;
   justify-content: center;
+  text-align: center;
 
   margin: auto;
   position: absolute;
