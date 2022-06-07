@@ -9,8 +9,6 @@ export const AppStyle = styled.div`
   justify-content: center;
   align-items: center;
 
-  box-sizing: border-box;
-
   h1 {
     font-size: 64px;
     line-height: 78px;
