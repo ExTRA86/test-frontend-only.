@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-interface IError {
+interface IProps {
   errorLogin: boolean;
   errorPassword: boolean;
   waiting: boolean;
 }
 
-export const FormStyle = styled.div<IError>`
+export const FormStyle = styled.div<IProps>`
   width: 40%;
 
   display: inline-table;
@@ -46,10 +46,6 @@ export const FormStyle = styled.div<IError>`
 
   input[type='password'] {
     border: ${props => (props.errorPassword ? '1px solid #E26F6F' : '0')};
-  }
-
-  input[type='checkbox'] {
-    margin-right: 17px;
   }
 
   button {
