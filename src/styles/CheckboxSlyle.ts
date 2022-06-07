@@ -30,6 +30,6 @@ export const CheckboxStyle = styled.div<IProps>`
   }
 
   label {
-    margin: 0px 0px 0px 14px;
+    margin: 0px 0px 0px 14px !important;
   }
 `;
