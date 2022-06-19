@@ -3,9 +3,9 @@ import { useForm, Resolver } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import Loader from '../components/Loader/Loader';
 import { AuthContext } from '../context';
-import { CheckboxStyle } from '../styles/CheckboxSlyle';
+import { CheckboxStyle } from '../styles/CheckboxStyle';
 import { FormStyle } from '../styles/FormStyle';
-import { usersBase } from '../UserBase';
+import { usersBase } from '../UsersBase';
 
 type FormValues = {
   login: string;
@@ -83,7 +83,7 @@ const Login: FC = () => {
       <form onSubmit={onSubmit}>
         {userError && (
           <span>
-            <p>!</p> Пользователя {userLogin} не существует{' '}
+            <p>!</p> Пользователя {userLogin} не существует
           </span>
         )}
 

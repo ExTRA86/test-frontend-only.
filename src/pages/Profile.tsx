@@ -3,7 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import Loader from '../components/Loader/Loader';
 import { AuthContext } from '../context';
 import { ProfileStyle } from '../styles/ProfileStyle';
-import { usersBase } from '../UserBase';
+import { usersBase } from '../UsersBase';
 
 interface IUser {
   login: string;
